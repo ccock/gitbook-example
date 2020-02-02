@@ -1,4 +1,4 @@
-## generate
+## generate pdf
 
 ### ebook converter
 
@@ -23,7 +23,6 @@ export PATH=$PATH:$EBOOK_PATH
 
 source .bash_profile
 ```
-
 
 ### cmd
 

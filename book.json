@@ -30,31 +30,19 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/magicbowen"
+            "url": "https://github.com/ccock"
         },
         "code": {
             "copyButtons": true
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © bowen 2019",
+            "copyright": "Copyright © CCOCK 2020",
             "modify_label": "本书发布时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
-        "sharing": {
-            "facebook": true,
-            "twitter": true,
-            "weibo": true,
-            "qq": true,
-            "all": [
-                "douban",
-                "google",
-                "qzone",
-                "linkedin"
-            ]
-        },
         "prism": {
             "css": [
-                "prismjs/themes/prism-solarizedlight.css"
+                "prismjs/themes/prism-dark.css"
             ],
             "lang": {
                 "flow": "typescript"

@@ -1,6 +1,6 @@
 ## plugin
 
-### 插件列表:
+### 常用插件列表:
 - back-to-top-button（返回顶部）
 - code（代码添加行号&复制按钮）
 - search-pro（高级搜索，支持中文）
@@ -21,7 +21,9 @@
 - toggle-chapters（目录折叠）
 - multipart（分章节展示）
 
-### install plugin
+### config plugin
+
+在`book.json`对应的位置增加插件和插件配置：
 
 ```json
 {
@@ -36,6 +38,12 @@
 }
 ```
 
+### install plugins
+
+以下三种方法皆可：
+
 - 配置book.json, 然后`gitbook install`
+
 - 使用npm安装，命令格式`npm install gitbook-plugin-插件名字`，如`npm install gitbook-plugin-code`
-- 从GitHub下载源码，放到node_modules文件夹里
+
+- 从GitHub下载源码，放到`node_modules`文件夹里

@@ -1,18 +1,18 @@
 ## usage
 
-### cmd
+### create
 
-```sh
-gitbook -h
+创建一个目录，在下面创建`README.md`和`SUMMARY.md`；
 
-gitbook init
+- README.md : 书的介绍，可以随便写
+- SUMMARY.md : 书的目录，具体格式参照本文档的`SUMMARY.md`
 
-gitbook serve
-
-gitbook build
-```
+创建好之后，运行`gitbook init`，会自动按照`SUMMARY.md`中的描述，生成各个章节对应的目录和文档名。如果目标文件已经存在不会覆盖。
 
 ### config
+
+书的根目录下的`book.json`可以用来配置书的元信息以及插件。
+`book.json`中配置的插件需要提前装好，关于插件的安装在下一章。
 
 book.json example:
 
@@ -37,7 +37,7 @@ book.json example:
         "-github",
         "splitter",
         "tbfed-pagefooter",
-        "donate",
+        "-donate",
         "-sharing",
         "sharing-plus",
         "prism",
@@ -49,54 +49,51 @@ book.json example:
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/magicbowen"
+            "url": "https://github.com/ccock"
         },
         "code": {
             "copyButtons": true
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © bowen 2019",
+            "copyright": "Copyright © CCOCK 2020",
             "modify_label": "本书发布时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
-        "donate": {
-            "wechat": "/assets/images/wxpay.png",
-            "alipay": "/assets/images/alipay.png",
-            "title": "",
-            "button": "赏",
-            "alipayText": "支付宝打赏",
-            "wechatText": "微信打赏"
-        },
-        "sharing": {
-            "facebook": true,
-            "twitter": true,
-            "weibo": true,
-            "qq": true,
-            "all": [
-                "douban",
-                "google",
-                "qzone",
-                "linkedin"
-            ]
-        },
         "prism": {
             "css": [
-                "prismjs/themes/prism-solarizedlight.css"
+                "prismjs/themes/prism-dark.css"
             ],
             "lang": {
                 "flow": "typescript"
             }
         }
-    },
-    "styles": {
-        "website": "assets/styles/website.less",
-        "ebook": "assets/styles/ebook.less",
-        "pdf": "assets/styles/pdf.less",
-        "mobi": "assets/styles/mobi.less",
-        "epub": "assets/styles/epub.less"
     }
 }
 ```
+
+`plugins`中配置了所有插件，暂时不使能的前面加`-`。
+`pluginsConfig`中是插件的配置。
+
+### cmd
+
+```sh
+# help
+gitbook -h
+
+# init a book
+gitbook init
+
+# run local http server for book review
+gitbook serve
+
+# build book
+gitbook build
+```
+
+`gitbook serve` 和`gitbook build`命令会检查配置的每个插件是否都已安装。
+插件的安装见下章。
+
+`gitbook serve`会将书默认以HTTP的方式发布在本机4000端口，可以打开浏览器查看书的内容。
 
 ### cover
 
@@ -110,9 +107,3 @@ gitbook 的封面可以通过插件auto cover自动生成，也可以自己配�
 不要有边框
 有清晰的标题
 任何小的标题需要清晰可见
-
-### versions
-
-```sh
-gitbook ls-remote
-```
