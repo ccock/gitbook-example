@@ -1,8 +1,25 @@
-## reference
+# publish to github
 
-- GitBook项目官网: http://www.gitbook.io
-- GitBook Github地址: https://github.com/GitbookIO/gitbook
-- toolchain: https://toolchain.gitbook.com/
-- https://einverne.github.io/gitbook-tutorial/
-- http://gitbook.hushuang.me/setup.html
-- https://blog.csdn.net/fghsfeyhdf/article/details/88403548
+
+- create github repo and push book
+
+Create github repo and push book to master branch;
+
+github support 3 ways to publish pages: master branch, docs folder in master branch, gh-pages branch;
+
+- build book
+
+```sh
+$ gitbook build
+```
+
+- push book to `gh-pages` branch
+
+```sh
+$ git subtree push --prefix=_book origin gh-pages
+
+$ git push origin master
+```
+
+
+

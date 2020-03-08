@@ -5,6 +5,6 @@
 * [usage](chapter2/readme.md)
 * [plugin](chapter3/readme.md)
 * [generate](chapter4/readme.md)
-* [reference](chapter5/readme.md)
-
+* [publish to github](chapter5/readme.md)
+* [reference](chapter6/readme.md)
 
